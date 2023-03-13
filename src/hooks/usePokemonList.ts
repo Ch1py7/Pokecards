@@ -1,0 +1,26 @@
+import { useState, useEffect, useCallback } from 'react'
+import { PokemonTypes } from 'types/pokemon.types'
+
+export interface UsePokemonListProps {
+	limit: number
+	offset: number
+}
+
+const createUrl = ({ limit, offset }: UsePokemonListProps) =>
+	`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`
+
+export const usePokemonList = (props: UsePokemonListProps) => {
+	const [pokemonList, setPokemonList] = useState<PokemonTypes.PokemonListItem[]>([])
+
+	const fetchPokemonList = useCallback(async () => {
+		const res = await fetch(createUrl(props))
+		const data: PokemonTypes.PokemonListResponse = await res.json()
+		setPokemonList(data.results)
+	}, [props, createUrl])
+
+	useEffect(() => {
+		fetchPokemonList()
+	}, [fetchPokemonList])
+
+	return { pokemonList }
+}

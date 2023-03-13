@@ -1,0 +1,48 @@
+@font-face {
+  font-family:"Pokemon Solid Normal";
+  src:url("./fonts/pokemonsolid.eot?") format("eot"),
+  url("./fonts/pokemonsolid.woff") format("woff"),
+  url("./fonts/pokemonsolid.ttf") format("truetype"),
+  url("./fonts/pokemonsolid.svg#PokemonSolidNormal") 
+  format("svg");
+  font-weight:normal;
+  font-style:normal;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html, body, #root {
+  min-height: 100vh;
+}
+
+body {
+  background-image: url(./pancreas-removebg-preview.png);
+  background-attachment: fixed;
+  background-size: auto;
+  animation: background-move 20s linear infinite both;
+  background-color: #2a39db;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+}
+
+.superSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 10rem;
+}
+
+button {
+  height: 5rem;
+  width: 5rem;
+  font-size: 3rem;
+}
