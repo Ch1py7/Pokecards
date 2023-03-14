@@ -1,8 +1,8 @@
 @keyframes background-move {
   from {
-    background-position: 0%;
+    background-position: 0;
   }
   to {
-    background-position: 99%;
+    background-position: 1356px;
   }
 }

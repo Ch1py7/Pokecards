@@ -13,9 +13,13 @@ export const usePokemonList = (props: UsePokemonListProps) => {
 	const [pokemonList, setPokemonList] = useState<PokemonTypes.PokemonListItem[]>([])
 
 	const fetchPokemonList = useCallback(async () => {
-		const res = await fetch(createUrl(props))
-		const data: PokemonTypes.PokemonListResponse = await res.json()
-		setPokemonList(data.results)
+		try {
+			const res = await fetch(createUrl(props))
+			const data: PokemonTypes.PokemonListResponse = await res.json()
+			setPokemonList(data.results)
+		} catch (error) {
+			console.error(error)
+		}
 	}, [props, createUrl])
 
 	useEffect(() => {
