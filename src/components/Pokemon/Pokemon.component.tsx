@@ -1,5 +1,5 @@
 import * as S from './Pokemon.styles'
-import { FC, Fragment, HTMLAttributes, ReactElement, useEffect, useState, useMemo } from 'react'
+import { FC, Fragment, HTMLAttributes, ReactElement, useEffect, useState } from 'react'
 import { PokemonTypes } from 'types/pokemon.types'
 
 interface PokemonProps extends S.PokemonContainerProps, HTMLAttributes<HTMLElement> {

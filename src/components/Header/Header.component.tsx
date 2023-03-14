@@ -4,7 +4,7 @@ import * as S from './Header.styles'
 export const Header: FC = (): ReactElement => {
 	return (
 		<S.Header>
-			<S.Logo alt='logo' src='/public/logo.png' />
+			<S.Logo alt='logo' src='/logo.png' />
 		</S.Header>
 	)
 }
