@@ -18,8 +18,11 @@ export const PokemonMainData = styled.article<PokemonContainerProps>`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 120%;
-  min-height: 30rem;
+  min-width: 15rem;
+  max-width: 25rem;
+  min-height: 35rem;
+  max-height: 40rem;
+  aspect-ratio: 1/1;
   border-radius: 2rem;
   background: linear-gradient(120deg, #387eff, #387eff, #2a39db);
   box-shadow: 5px 5px 5px 0 #000, 6px 6px 1rem #000;  
@@ -50,8 +53,6 @@ export const PokemonStats = styled.div<VisibilityProps>`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: clamp(2rem, 26rem, 26rem);
-  height: 26rem;
   transition: opacity 0.3s ease-in-out, z-index 0.3s ease-in-out;
   opacity: ${(props) => `${props.nonVisibility}`};
   z-index: ${(props) => `${props.nonVisibility}`};
