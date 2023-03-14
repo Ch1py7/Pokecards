@@ -1,4 +1,4 @@
-import { FC, ReactElement, useState, Fragment, useMemo } from 'react'
+import { FC, ReactElement, useState, Fragment } from 'react'
 import { Pokemon } from 'components/Pokemon'
 import { PokemonTable } from 'components/PokemonTable'
 import { usePokemonList } from 'hooks/usePokemonList'
