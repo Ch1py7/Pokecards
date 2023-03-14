@@ -31,35 +31,35 @@ export const Pokemon: FC<PokemonProps> = ({ pokemon, selected, ...rest }): React
 	const types: string[] | undefined = pokemonData?.types.map((type, _) => type.type.name)
 	const type = types?.map((types) => {
 		if (types === 'bug') {
-			return 'lightgreen'
+			return 'aabb22'
 		} else if (types === 'grass') {
-			return 'darkgreen'
+			return '77cc55'
 		} else if (types === 'fire') {
-			return 'darkorange'
+			return 'ff4422'
 		} else if (types === 'water') {
-			return 'lightblue'
+			return '3399ff'
 		} else if (types === 'normal') {
-			return 'grey'
+			return 'bbbbaa'
 		} else if (types === 'poison') {
-			return 'blueviolet'
+			return 'aa5599'
 		} else if (types === 'electric') {
-			return 'yellow'
+			return 'ffcc33'
 		} else if (types === 'ground') {
-			return 'burlywood'
+			return 'ddbb55'
 		} else if (types === 'fairy') {
-			return 'pink'
+			return 'ffaaff'
 		} else if (types === 'fighting') {
-			return 'darkred'
+			return 'bb5544'
 		} else if (types === 'psychic') {
-			return 'darksalmon'
+			return 'ff5599'
 		} else if (types === 'rock') {
-			return 'darkgoldenrod'
+			return 'bbaa66'
+		} else if (types === 'ghost') {
+			return '6666aa'
 		} else if (types === 'ice') {
-			return 'cornflowerblue'
+			return '77ddff'
 		} else if (types === 'dragon') {
-			return 'purple'
-		} else if (types === 'dark') {
-			return 'darkslategray'
+			return '7766ee'
 		}
 	})
 	const trueType = type?.shift()

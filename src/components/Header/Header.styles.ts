@@ -8,7 +8,7 @@ export const Header = styled.header`
   background-color: #1e7f9a;
 `
 
-export const Title = styled.h1`
-  font-family: 'Pokemon Solid Normal', cursive;
-  font-size: 3rem;
+export const Logo = styled.img`
+  height: 5rem;
+  user-select: none;
 `

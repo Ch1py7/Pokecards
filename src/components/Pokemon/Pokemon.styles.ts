@@ -69,7 +69,7 @@ export const PokemonId = styled.p`
 export const PokemonImg = styled.img<PokeStats>`
   width: 70%;
   aspect-ratio: 1/1;
-  background-color: ${(props) => `${props.type}`};
+  background-color: ${(props) => `#${props.type}`};
   border-radius: 20%;
   margin: 0 auto;
 `

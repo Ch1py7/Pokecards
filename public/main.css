@@ -18,7 +18,7 @@ html, body, #root {
 }
 
 body {
-  background-image: url(./pancreas-removebg-preview.png);
+  background-image: url(./background.png);
   background-attachment: fixed;
   background-size: auto;
   animation: background-move 20s linear infinite both;
