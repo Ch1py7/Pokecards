@@ -19,7 +19,7 @@ html, body, #root {
 
 body {
   background-image: url(/background.png);
-  animation: background-move 10s linear infinite;
+  animation: background-move 1600s linear infinite;
 }
 
 * {
