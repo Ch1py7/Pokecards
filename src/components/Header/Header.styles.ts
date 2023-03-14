@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const Header = styled.header`
-  height: 6rem;
   display: grid;
   place-items: center;
+  height: 6rem;
   background-color: #1e7f9a;
 `
 

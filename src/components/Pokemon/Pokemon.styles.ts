@@ -17,14 +17,15 @@ export const PokemonMainData = styled.article<PokemonContainerProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 120%;
   width: 100%;
+  height: 120%;
   min-height: 30rem;
-  background: linear-gradient(120deg, #387eff, #387eff, #2a39db);
   border-radius: 2rem;
+  background: linear-gradient(120deg, #387eff, #387eff, #2a39db);
   box-shadow: 5px 5px 5px 0 #000, 6px 6px 1rem #000;  
   font-family: cursive;
-  transition: scale 0.1s linear, transform 0.3s linear;
+  transition: scale 0.2s linear;
+  cursor: pointer;
   &:hover {
     scale: 1.1;
   }
@@ -32,11 +33,11 @@ export const PokemonMainData = styled.article<PokemonContainerProps>`
 
 export const PokemonInformation = styled.div<VisibilityProps>`
   position: absolute;
-  width: clamp(2rem, 26rem, 26rem);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  width: clamp(2rem, 26rem, 26rem);
   transition: opacity 0.3s ease-in-out, z-index 0.3s ease-in-out;
   opacity: ${(props) => `${props.visibility}`};
   z-index: ${(props) => `${props.visibility}`};
@@ -45,12 +46,12 @@ export const PokemonInformation = styled.div<VisibilityProps>`
 
 export const PokemonStats = styled.div<VisibilityProps>`
   position: absolute;
-  width: clamp(2rem, 26rem, 26rem);
-  height: 26rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  width: clamp(2rem, 26rem, 26rem);
+  height: 26rem;
   transition: opacity 0.3s ease-in-out, z-index 0.3s ease-in-out;
   opacity: ${(props) => `${props.nonVisibility}`};
   z-index: ${(props) => `${props.nonVisibility}`};
