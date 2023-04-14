@@ -63,3 +63,35 @@ button:active {
   box-shadow: inset 0px 0.1em 0.6em #2a39db;
   transform: translateY(0em);
 }
+
+.firstLine {
+  transition: transform 0.3s linear;
+  transform-origin: left;
+  transform: rotate(30deg);
+}
+
+.secLine {
+  display: none;
+}
+
+.thirdLine {
+  transition: transform 0.3s linear;
+  transform-origin: left;
+  transform: rotate(-30deg);
+}
+
+@media (max-width: 750px) {
+  .noShowSocials {
+    position: fixed;
+    top: 7%;
+    right: -12rem;
+    transition: right 0.3s linear;
+  }
+  
+  .showSocials {
+    position: fixed;
+    top: 7%;
+    right: 1rem;
+    transition: right 0.3s linear;
+  }
+}
