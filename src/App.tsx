@@ -4,38 +4,19 @@ import { PokemonTable } from 'components/PokemonTable'
 import { usePokemonList } from 'hooks/usePokemonList'
 import { Header } from 'components/Header'
 
-const LIMIT = 10
+const LIMIT = 20 //1281
 
 export const App: FC = (): ReactElement => {
-	const [selected, setSelected] = useState(0)
-	const [pagination, setPagination] = useState<number>(0)
-	const { pokemonList } = usePokemonList({ limit: LIMIT, offset: pagination * LIMIT })
-
-	const handlePagination = (page: number) => () => {
-		resetSelected()
-		setPagination((prev) => prev + page)
-	}
-
-	const resetSelected = () => {
-		setSelected(0)
-	}
+	const { pokemonList } = usePokemonList({ limit: LIMIT, offset: 0 })
 
 	return (
 		<Fragment>
 			<Header />
 			<PokemonTable>
 				{pokemonList.map((pokemon, index) => (
-					<Pokemon key={index} pokemon={pokemon} selected={index === selected} />
+					<Pokemon key={index} pokemon={pokemon} />
 				))}
 			</PokemonTable>
-			<section className='superSection'>
-				<button type='button' onClick={handlePagination(-1)} disabled={pagination === 0}>
-					{'<'}
-				</button>
-				<button type='button' onClick={handlePagination(1)} disabled={pagination === 14}>
-					{'>'}
-				</button>
-			</section>
 		</Fragment>
 	)
 }

@@ -1,25 +1,13 @@
 import * as S from './Pokemon.styles'
-import { FC, Fragment, HTMLAttributes, ReactElement, useEffect, useState } from 'react'
+import { FC, HTMLAttributes, ReactElement, useEffect, useState } from 'react'
 import { PokemonTypes } from 'types/pokemon.types'
 
-interface PokemonProps extends S.PokemonContainerProps, HTMLAttributes<HTMLElement> {
+interface PokemonProps extends HTMLAttributes<HTMLElement> {
 	pokemon: PokemonTypes.PokemonListItem
 }
 
-export const Pokemon: FC<PokemonProps> = ({ pokemon, selected, ...rest }): ReactElement => {
+export const Pokemon: FC<PokemonProps> = ({ pokemon, ...rest }): ReactElement => {
 	const [pokemonData, setPokemonData] = useState<PokemonTypes.PokemonResponse | null>(null)
-	const [visibility, setVisibiliy] = useState(1)
-	const [nonVisibility, setNonVisibiliy] = useState(0)
-
-	const handleVisibility = () => () => {
-		if (visibility) {
-			setVisibiliy(0)
-			setNonVisibiliy(1)
-		} else {
-			setVisibiliy(1)
-			setNonVisibiliy(0)
-		}
-	}
 
 	useEffect(() => {
 		fetch(pokemon.url)
@@ -65,29 +53,12 @@ export const Pokemon: FC<PokemonProps> = ({ pokemon, selected, ...rest }): React
 	const trueType = type?.shift()
 
 	return (
-		<S.PokemonMainData selected={selected} {...rest}>
+		<S.PokemonMainData {...rest}>
 			{pokemonData && (
-				<Fragment>
-					<S.PokemonInformation onClick={handleVisibility()} visibility={visibility}>
-						<S.PokemonId>{pokemonData.id}</S.PokemonId>
-						<S.PokemonImg src={pokemonData.sprites.front_default} type={trueType} />
-						<S.PokemonData>{pokemonData.name}</S.PokemonData>
-						<S.PokemonData>Altura: {pokemonData.height / 10}m</S.PokemonData>
-						<S.PokemonData>Peso: {pokemonData.weight / 10}kg</S.PokemonData>
-					</S.PokemonInformation>
-					<S.PokemonStats onClick={handleVisibility()} nonVisibility={nonVisibility}>
-						{pokemonData.stats.map((stat, index) => (
-							<S.PokemonData key={index}>
-								{stat.stat.name}: {stat.base_stat}
-							</S.PokemonData>
-						))}
-						<S.PokemonType>
-							{pokemonData.types.map((type, index) => (
-								<S.PokemonData key={index}>{type.type.name}</S.PokemonData>
-							))}
-						</S.PokemonType>
-					</S.PokemonStats>
-				</Fragment>
+        <>
+          <S.PokemonImg src={pokemonData.sprites.front_default} type={trueType} />
+          <S.PokemonData>{pokemonData.name}</S.PokemonData>
+        </>
 			)}
 		</S.PokemonMainData>
 	)
