@@ -45,33 +45,15 @@ export const HeaderSearch = styled.input`
   }
 `
 
-export const HeaderBurger = styled.div`
-  @media (max-width: 750px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 5rem;
-    height: 50%;
-    align-self: center;
-    background: none;
-    outline: 0;
-    border: 0;
-    cursor: pointer;
-  }
-`
-
-export const BurguerLine = styled.div`
-  width: 100%;
-  height: 6px;
-  background-color: #387EFF;
-`
-
 export const Socials = styled.div`
   display: flex;
+  justify-content: center;
+  width: 25rem;
   align-items: center;
-  gap: 2rem;
   height: 6rem;
+  gap: 2rem;
   @media (max-width: 750px) {
+    width: 13rem;
     padding: 2px;
     border-radius: 1rem;
     background-color: #387EFF;
@@ -79,6 +61,6 @@ export const Socials = styled.div`
 `
 
 export const HeaderSocial = styled.img`
-  height: 75%;
+  height: 4.6rem;
   border-radius: 50%;
 `

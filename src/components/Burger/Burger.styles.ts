@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Burger = styled.div`
+  display: none;
   @media (max-width: 750px) {
     display: flex;
     flex-direction: column;

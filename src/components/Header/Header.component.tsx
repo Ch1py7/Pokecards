@@ -15,8 +15,12 @@ export const Header: FC = (): ReactElement => {
 			<S.HeaderSearch type='text' placeholder='Search a pokemon' />
 			<Burger burger={burger} onClickBurger={onClickBurguer} />
 			<S.Socials className={burger ? 'noShowSocials' : 'showSocials'}>
-				<S.HeaderSocial src='/github.png' />
-				<S.HeaderSocial src='/twitter.png' />
+				<a href='https://github.com/ch1py7' target='_BLANK' rel='noreferrer'>
+					<S.HeaderSocial src='/github.png' />
+				</a>
+				<a href='https://twitter.com/bulbsum' target='_BLANK' rel='noreferrer'>
+					<S.HeaderSocial src='/twitter.png' />
+				</a>
 			</S.Socials>
 		</S.Header>
 	)

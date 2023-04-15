@@ -84,7 +84,7 @@ button:active {
   .noShowSocials {
     position: fixed;
     top: 7%;
-    right: -12rem;
+    right: -16rem;
     transition: right 0.3s linear;
   }
   
