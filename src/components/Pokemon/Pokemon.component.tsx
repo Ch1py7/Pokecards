@@ -55,10 +55,10 @@ export const Pokemon: FC<PokemonProps> = ({ pokemon, ...rest }): ReactElement =>
 	return (
 		<S.PokemonMainData {...rest}>
 			{pokemonData && (
-        <>
-          <S.PokemonImg src={pokemonData.sprites.front_default} type={trueType} />
-          <S.PokemonData>{pokemonData.name}</S.PokemonData>
-        </>
+				<>
+					<S.PokemonImg src={pokemonData.sprites.front_default} type={trueType} />
+					<S.PokemonData>{pokemonData.name}</S.PokemonData>
+				</>
 			)}
 		</S.PokemonMainData>
 	)

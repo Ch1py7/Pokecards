@@ -9,6 +9,7 @@ export namespace PokemonTypes {
 	}
 
 	export interface PokemonResponse {
+		abilities: Abilities[]
 		id: number
 		name: string
 		base_experience: number
@@ -38,6 +39,11 @@ export namespace PokemonTypes {
 		held_items: any[]
 		// rome-ignore lint/suspicious/noExplicitAny:
 		past_types: any[]
+	}
+
+	export interface Abilities {
+		name: string
+		url: string
 	}
 
 	export interface Form {
