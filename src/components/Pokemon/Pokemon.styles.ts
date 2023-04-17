@@ -6,11 +6,12 @@ export interface PokeStats {
 
 export const PokemonMainData = styled.article`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  width: 10rem;
-  aspect-ratio: 1/1;
+  width: 12rem;
+  height: 15rem;
+  padding: 1rem;
   border-radius: 2rem;
   background: linear-gradient(120deg, #387eff, #387eff, #2a39db);
   box-shadow: 5px 5px 5px 0 #000, 6px 6px 1rem #000;  
@@ -20,6 +21,16 @@ export const PokemonMainData = styled.article`
   &:hover {
     scale: 1.1;
   }
+`
+
+export const PokemonAnchor = styled.a`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  color: #03045e;
+  text-decoration: none;
 `
 
 export const PokemonImg = styled.img<PokeStats>`
@@ -32,6 +43,6 @@ export const PokemonImg = styled.img<PokeStats>`
 export const PokemonData = styled.h1`
   font-weight: bold;
   text-transform: capitalize;
-  font-size: 100%;
+  font-size: 1.4rem;
   margin: 4px 0;
 `

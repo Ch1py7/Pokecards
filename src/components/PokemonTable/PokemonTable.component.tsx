@@ -7,14 +7,16 @@ import { Pokemon } from 'components/Pokemon'
 const LIMIT = 150 //1281
 
 export const PokemonTable: FC = (): ReactElement => {
-  const { pokemonList } = usePokemonList({ limit: LIMIT })
+	const { pokemonList } = usePokemonList({ limit: LIMIT })
 
 	return (
-    <>
-    <Header />
-    <S.PokemonTable>{pokemonList.map((pokemon, index) => (
+		<>
+			<Header />
+			<S.PokemonTable>
+				{pokemonList.map((pokemon, index) => (
 					<Pokemon key={index} pokemon={pokemon} />
-				))}</S.PokemonTable>
-    </>
-  )
+				))}
+			</S.PokemonTable>
+		</>
+	)
 }
