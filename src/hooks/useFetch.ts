@@ -1,22 +1,21 @@
-import { useEffect, useState } from 'react'
-import { PokemonTypes } from 'types/pokemon.types'
+import { useCallback, useEffect, useState } from 'react'
 
 export interface useFetchProps {
 	url: string
 }
 
-export const useFetch = ({ url }: useFetchProps) => {
-	const [state, setState] = useState<PokemonTypes.PokemonResponse>(Object)
+export const useFetch = <T>({ url }: useFetchProps) => {
+	const [state, setState] = useState<T | null>(null)
 
-	const fetchPokemons = async () => {
+	const fetchPokemons = useCallback(async () => {
 		try {
 			const res = await fetch(url)
-			const data: PokemonTypes.PokemonResponse = await res.json()
+			const data: T = await res.json()
 			setState(data)
 		} catch (error) {
 			console.log(`Error uwu: ${error}`)
 		}
-	}
+	}, [url])
 
 	useEffect(() => {
 		fetchPokemons()
