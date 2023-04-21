@@ -9,6 +9,11 @@
   font-style:normal;
 }
 
+@font-face {
+  font-family: "Minecraft";
+  src: url("./fonts/Minecraft.ttf");
+}
+
 html {
   font-size: 62.5%;
 }
