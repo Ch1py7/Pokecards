@@ -13,6 +13,8 @@ export default defineConfig({
 			pages: path.resolve(__dirname, './src/pages'),
 			hooks: path.resolve(__dirname, './src/hooks'),
 			types: path.resolve(__dirname, './src/types'),
+			styles: path.resolve(__dirname, './src/styles'),
+      context: path.resolve(__dirname, './src/context'),
 		},
 	},
 	plugins: [react()],

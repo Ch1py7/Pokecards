@@ -8,6 +8,8 @@
 			"@pages": ["/pages/*", "/pages"],
 			"@hooks": ["/hooks/*", "/hooks"],
 			"@types": ["/types/*", "/types"],
+      "@styles": ["/styles/*", "/styles"],
+      "@context": ["/context/*", "/stylescontext"],
 		},
     "target": "ESNext",
     "useDefineForClassFields": true,
