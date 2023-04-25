@@ -60,11 +60,11 @@ export const Socials = styled.div`
     width: 13rem;
     padding: 2px;
     border-radius: 1rem;
-    background-color: #387EFF;
+    background: linear-gradient(to right, #023e8a, #0077b6 );
   }
 `
 
 export const HeaderSocial = styled.img`
-  height: 4.6rem;
+  height: 3.6rem;
   border-radius: 50%;
 `
