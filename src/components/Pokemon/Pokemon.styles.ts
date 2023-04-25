@@ -14,7 +14,7 @@ export const PokemonMainData = styled.article`
   padding: 1rem;
   border-radius: 2rem;
   background: linear-gradient(120deg, #387eff, #387eff, #2a39db);
-  box-shadow: 5px 5px 5px 0 #000, 6px 6px 1rem #000;  
+  box-shadow: 5px 5px 0 0 #0000009f;
   font-family: cursive;
   transition: scale 0.2s linear;
   cursor: pointer;
@@ -41,8 +41,8 @@ export const PokemonImg = styled.img<PokeStats>`
 `
 
 export const PokemonData = styled.h1`
-  font-weight: bold;
-  text-transform: capitalize;
-  font-size: 1.4rem;
   margin: 4px 0;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-transform: capitalize;
 `

@@ -6,11 +6,11 @@ export const Burger = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 5rem;
-    height: 50%;
     align-self: center;
+    width: 7rem;
+    height: 50%;
+    padding: 0 1rem;
     background: none;
-    outline: 0;
     border: 0;
     cursor: pointer;
   }

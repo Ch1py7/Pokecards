@@ -18,21 +18,28 @@ export const Header = styled.header`
 `
 
 export const HeaderLogo = styled.div`
+  width: 25rem;
+  height: 6rem;
   background-image: url(/logo.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 25rem;
-  height: 100%;
   @media (max-width: 750px) {
-    background-image: url(/logo-s.png);
     width: 7rem;
     height: 4rem;
+    background-image: url(/logo-s.png);
+  }
+`
+
+export const HeaderForm = styled.form`
+  width: 25%;
+  @media (max-width: 750px) {
+    width: 50%;
   }
 `
 
 export const HeaderSearch = styled.input`
-  width: 25%;
+  width: 100%;
   min-width: 10%;
   height: 50%;
   border: none;
@@ -40,9 +47,6 @@ export const HeaderSearch = styled.input`
   padding: 4px 2rem;
   color: white;
   background-color: #87A9DB;
-  @media (max-width: 750px) {
-    width: 70%;
-  }
 `
 
 export const Socials = styled.div`

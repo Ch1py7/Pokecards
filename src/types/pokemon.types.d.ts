@@ -39,6 +39,25 @@ export namespace PokemonTypes {
 		}
 	}
 
+	export interface PokemonDamage {
+		damage_relations: DamageRelations
+	}
+
+	export interface DamageRelations {
+		double_damage_from: DoubleDamageFrom[]
+		double_damage_to: DoubleDamageTo[]
+	}
+
+	export interface DoubleDamageFrom {
+		name: string
+		url: URL
+	}
+
+	export interface DoubleDamageTo {
+		name: string
+		url: URL
+	}
+
 	export interface Abilities {
 		name: string
 		url: URL

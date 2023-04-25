@@ -10,6 +10,7 @@
 			"@types": ["/types/*", "/types"],
       "@styles": ["/styles/*", "/styles"],
       "@context": ["/context/*", "/stylescontext"],
+      "@utils": ["/utils/*", "/utils"],
 		},
     "target": "ESNext",
     "useDefineForClassFields": true,

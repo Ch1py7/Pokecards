@@ -1,8 +1,0 @@
-@keyframes background-move {
-  from {
-    background-position: -30000px;
-  }
-  to {
-    background-position: 30000px;
-  }
-}

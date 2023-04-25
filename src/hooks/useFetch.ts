@@ -5,7 +5,7 @@ export interface useFetchProps {
 }
 
 export const useFetch = <T>({ url }: useFetchProps) => {
-	const [state, setState] = useState<T | null>(null)
+	const [state, setState] = useState<T | undefined>()
 
 	const fetchPokemons = useCallback(async () => {
 		try {
@@ -13,7 +13,7 @@ export const useFetch = <T>({ url }: useFetchProps) => {
 			const data: T = await res.json()
 			setState(data)
 		} catch (error) {
-			console.log(`Error uwu: ${error}`)
+			console.log(`Error: ${error}`)
 		}
 	}, [url])
 
