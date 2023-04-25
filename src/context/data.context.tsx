@@ -4,7 +4,7 @@ import { PokemonTypes } from 'types/pokemon.types'
 
 interface APIContextProviderProps {
 	children: ReactElement | ReactElement[]
-	id: number
+	id: string
 }
 
 interface DataContextState {

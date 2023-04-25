@@ -12,7 +12,7 @@ import { ApiContextProvider } from 'context/data.context'
 
 export interface SinglePokemonProps {
 	params: {
-		id: number
+		id: string
 	}
 }
 
