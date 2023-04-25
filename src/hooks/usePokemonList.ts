@@ -3,11 +3,9 @@ import { PokemonTypes } from 'types/pokemon.types'
 
 export interface UsePokemonListProps {
 	limit: number
-	offset: number
 }
 
-const createUrl = ({ limit, offset }: UsePokemonListProps) =>
-	`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`
+const createUrl = ({ limit }: UsePokemonListProps) => `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=0`
 
 export const usePokemonList = (props: UsePokemonListProps) => {
 	const [pokemonList, setPokemonList] = useState<PokemonTypes.PokemonListItem[]>([])

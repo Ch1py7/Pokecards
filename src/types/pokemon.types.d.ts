@@ -1,7 +1,7 @@
 export namespace PokemonTypes {
 	export interface PokemonListItem {
 		name: string
-		url: string
+		url: URL
 	}
 
 	export interface PokemonListResponse {
@@ -9,6 +9,10 @@ export namespace PokemonTypes {
 	}
 
 	export interface PokemonResponse {
+		flavor_text_entries: {
+			flavor_text: string
+		}[]
+		abilities: Abilities[]
 		id: number
 		name: string
 		base_experience: number
@@ -33,16 +37,35 @@ export namespace PokemonTypes {
 			front_shiny: string
 			front_shiny_female: string
 		}
-		// TODO - type properties defined as any
-		// rome-ignore lint/suspicious/noExplicitAny:
-		held_items: any[]
-		// rome-ignore lint/suspicious/noExplicitAny:
-		past_types: any[]
+	}
+
+	export interface PokemonDamage {
+		damage_relations: DamageRelations
+	}
+
+	export interface DamageRelations {
+		double_damage_from: DoubleDamageFrom[]
+		double_damage_to: DoubleDamageTo[]
+	}
+
+	export interface DoubleDamageFrom {
+		name: string
+		url: URL
+	}
+
+	export interface DoubleDamageTo {
+		name: string
+		url: URL
+	}
+
+	export interface Abilities {
+		name: string
+		url: URL
 	}
 
 	export interface Form {
 		name: string
-		url: string
+		url: URL
 	}
 
 	export interface GameIndex {
@@ -52,7 +75,7 @@ export namespace PokemonTypes {
 
 	export interface Version {
 		name: string
-		url: string
+		url: URL
 	}
 
 	export interface Moves {
@@ -62,29 +85,29 @@ export namespace PokemonTypes {
 
 	export interface Move {
 		name: string
-		url: string
+		url: URL
 	}
 
 	export interface VersionGroupDetail {
 		level_learned_at: number
 		move_learn_method: {
 			name: string
-			url: string
+			url: URL
 		}
 		version_group: {
 			name: string
-			url: string
+			url: URL
 		}
 	}
 
 	export interface Species {
 		name: string
-		url: string
+		url: URL
 	}
 
 	export interface Stat {
 		name: string
-		url: string
+		url: URL
 	}
 
 	export interface Stats {
@@ -95,7 +118,7 @@ export namespace PokemonTypes {
 
 	export interface Type {
 		name: string
-		url: string
+		url: URL
 	}
 
 	export interface Types {

@@ -1,31 +1,20 @@
 import styled from 'styled-components'
 
-export interface PokemonContainerProps {
-	selected?: boolean
-}
-
-export interface VisibilityProps {
-	visibility?: number
-	nonVisibility?: number
-}
-
 export interface PokeStats {
 	type?: string
 }
 
-export const PokemonMainData = styled.article<PokemonContainerProps>`
+export const PokemonMainData = styled.article`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  min-width: 15rem;
-  max-width: 25rem;
-  min-height: 35rem;
-  max-height: 40rem;
-  aspect-ratio: 1/1;
+  flex-direction: column;
+  width: 12rem;
+  height: 15rem;
+  padding: 1rem;
   border-radius: 2rem;
   background: linear-gradient(120deg, #387eff, #387eff, #2a39db);
-  box-shadow: 5px 5px 5px 0 #000, 6px 6px 1rem #000;  
+  box-shadow: 5px 5px 0 0 #0000009f;
   font-family: cursive;
   transition: scale 0.2s linear;
   cursor: pointer;
@@ -34,50 +23,26 @@ export const PokemonMainData = styled.article<PokemonContainerProps>`
   }
 `
 
-export const PokemonInformation = styled.div<VisibilityProps>`
-  position: absolute;
+export const PokemonAnchor = styled.a`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  width: clamp(2rem, 26rem, 26rem);
-  transition: opacity 0.3s ease-in-out, z-index 0.3s ease-in-out;
-  opacity: ${(props) => `${props.visibility}`};
-  z-index: ${(props) => `${props.visibility}`};
-  user-select: none;
-`
-
-export const PokemonStats = styled.div<VisibilityProps>`
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  transition: opacity 0.3s ease-in-out, z-index 0.3s ease-in-out;
-  opacity: ${(props) => `${props.nonVisibility}`};
-  z-index: ${(props) => `${props.nonVisibility}`};
-  user-select: none;
-`
-export const PokemonType = styled.div`
-  display: flex;
-  gap: 1rem;
-`
-
-export const PokemonId = styled.p`
-  font-weight: bold;
-  font-size: 200%;
+  height: 100%;
+  color: #03045e;
+  text-decoration: none;
 `
 
 export const PokemonImg = styled.img<PokeStats>`
-  width: 70%;
+  width: 100%;
   aspect-ratio: 1/1;
   background-color: ${(props) => `#${props.type}`};
   border-radius: 20%;
-  margin: 0 auto;
 `
 
 export const PokemonData = styled.h1`
-  font-weight: normal;
+  margin: 4px 0;
+  font-weight: bold;
+  font-size: 1.4rem;
   text-transform: capitalize;
-  font-size: 220%;
 `
